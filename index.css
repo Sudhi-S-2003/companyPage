@@ -1,22 +1,25 @@
         
      *{
         margin: 0;
+        font-family: 'Times New Roman', Times, serif;
         
     }
-         body{
+         .section1{
             background-image: url('images/backgroundimage.jpg');
             background-repeat:no-repeat;
             background-size:cover ;
-            height: 90vh;
+            height: 100vh;
          }
      
      .navbar {
         width: 100%;
-        height: 29px;
+        height: 40px;
         border: 3px ;
         /* background-color: grey; */
-        background-color: rgba(95, 105, 112, 0.6) ;
+        background-color: rgba(95, 105, 112, 0.3) ;
         padding-top: 11px;
+        position: fixed;
+        top:0;
         }
         .left{
             height: 100%;
@@ -36,28 +39,147 @@
         .navbar  a {
                 text-decoration: none;
                width: 100px;
-               padding: 10px;
-                color: #000000;
-            
-                font-family: Arial, Helvetica, sans-serif;
+               padding: 20px;
+                color:#fff;
+                z-index: 3;
+        font-size: 20px;
         }
          .navbar a:hover{
                 background-color: rgb(125, 161, 161);
         }
+
+        .heading{
+            text-align: center;
+            width: 100%;
+            font-size: 30px;
+            color: blue;
+        }
+        .section2{
+            background-color: rgb(125, 161, 161);
+            height: 100%;
+            padding: 10px;
+        }
         .container{
-margin-top: 98vh;
-background-color: aqua;
-height: 100vh;
-display: flex;
+            display: flex;
+            flex-wrap: wrap;
         }
         .sub-container{
-            width: 30%;
-            height: 300px;
+            position: relative;
+            padding: 10px;
+            width: 27%;
+            min-height: 300px;
             margin: 30px;
             background-color: rgba(95, 105, 112, 0.6) ;
+        
         }
         .sub-container h1{
             font-size: larger;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             text-align: center;
+        }
+        .sub-container .body{
+            margin: 10px 20px;
+            word-wrap: break-word;
+        }
+        .sub-container img{
+            height: 150px;
+           width: 115px;  
+           display: block;
+           margin-left: auto;    
+           margin-right: auto;
+    
+        }
+        /* .imgContainer{
+            width: fit-content;
+            padding-left: 50px;
+           
+        } */
+        .section3{
+            background-color: rgb(125, 161, 136);
+            height: 100%;
+            padding: 50px;
+            text-align: center;
+        }
+        .contact-container{
+            display: flex;
+            margin-top: 20px;
+        }
+        .contact-container .img-container{
+            width: 50%;
+        
+        }
+        .contact-container .form-container{
+            width: 50%; 
+            height: 400px;
+        }
+        .contact-container .form-container form{
+            width: 70%;
+            border: 2px solid red;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .contact-container .form-container form input{
+width: 90%;
+height: 30px;
+margin: 10px;
+border-radius: 10px;
+border: none;
+        }
+        .contact-container .form-container form textarea{
+            width: 90%;
+            height: 70px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .contact-container .form-container form button{
+border: green 2px solid;
+width: 150px;
+height: 30px;
+background-color: transparent;
+border-radius: 10px;
+        }
+        .contact-container .form-container form button:hover{
+            background-color: green;
+            border: 2px solid;
+
+        }
+        .section4{
+            background-color: rgb(20, 27, 25);
+            height: 100%;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .section4 .links{
+display: flex;
+        }
+        .section4 .links .leftlink a{
+            display: block;
+            text-decoration: none;
+            width: 100px;
+            padding: 5px;
+             z-index: 3;
+     font-size: 20px;
+        }    
+        
+        @media (max-width:1030px) {
+            .contact-container .form-container form{
+                margin-left: 79px;
+            }
+        }
+        @media (max-width:770px) {
+            .contact-container {
+                display: block;
+            }
+            .contact-container .img-container, .contact-container .form-container{
+                margin: auto;
+            }
+        }
+        @media (max-width:430px) {
+            .contact-container .img-container img, {
+                margin-left: -48px;
+            }
+            .contact-container .form-container form input,.contact-container .form-container form textarea,.contact-container .form-container form button{
+                width: 100px;
+            }
         }
