@@ -18,7 +18,7 @@
     align-items: center;
     background-color: #333;
     padding: 10px 20px;
-    height: 40px;
+    min-height: 40px;
 }
 .navbar .left{
     display: flex;
@@ -32,7 +32,7 @@
     height: 40px;
 }
 
-.navbar i,.navbar button{
+.navbar i,.navbar button,.navbar input[type="checkbox"]{
     display: none;
 }
 
@@ -74,12 +74,14 @@
     min-height: 300px;
     margin: 30px;
     background-color: rgba(95, 105, 112, 0.6);
+    z-index: 1;
 }
 
 .sub-container h1 {
     font-size: larger;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .sub-container .body {
@@ -89,10 +91,11 @@
 
 .sub-container img {
     height: 150px;
-    width: 115px;
+    width: 254px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 
@@ -163,7 +166,7 @@
 .section4 {
     background-color: rgb(20, 27, 25);
     height: 100%;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
     color: white;
 }
@@ -217,20 +220,28 @@
     .navbar .right a{
         display: none;
     }
-    .navbar .right button,.navbar .right i{
+    .navbar .right label  .fa-bars{
+        display: block;
+        cursor: pointer;
         z-index: 6;
-        display: block;
-    }
-    .navbar .right button{
         background-color: transparent;
-        /* border: none; */
     }
-    button:active  .navbar .right a {
+    .navbar{
         display: block;
-      }
-      button:active  .navbar .right i{
+        z-index: 6;
+
+    }
+    .navbar .right label{
+        position: absolute;
+        top:8%;
+        left:80%;
+    }   
+    .navbar .right input[type="checkbox"]:checked ~ a{ display: block;}
+    .navbar .right input[type="checkbox"]:checked ~ label .fa-close {
+        display: block;
+    }.navbar .right input[type="checkbox"]:checked ~ label .fa-bars{
         display: none;
-      }
+    }
     .contact-container .form-container form {
         margin-left: 5px;
     }
